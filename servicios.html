@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+</head>
+<body>
+    <h1>SERVICIOS DE ESMALTADO PERMANENTE</h1>
+    <p>¡25% de descuento por lanzamiento! Válido hasta el 31 de marzo.</p>
+
+    <div>
+        <h2>Esmaltado Clásico</h2>
+        <p>Un esmaltado básico con color a elección.</p>
+        <p><strong>Duración estimada:</strong> 45 min</p>
+        <p><strong>Precio:</strong> $15.000</p>
+        <button onclick="seleccionarServicio('Esmaltado Clásico')">+</button>
+    </div>
+
+    <div>
+        <h2>Esmaltado Francesa</h2>
+        <p>Un diseño elegante con la clásica línea blanca.</p>
+        <p><strong>Duración estimada:</strong> 50 min</p>
+        <p><strong>Precio:</strong> $18.000</p>
+        <button onclick="seleccionarServicio('Esmaltado Francesa')">+</button>
+    </div>
+
+    <script>
+        function seleccionarServicio(servicio) {
+            let mensaje = `Hola! Me gustaría agendar el servicio de ${servicio}.`;
+            let url = `https://wa.me/TUNUMERO?text=${encodeURIComponent(mensaje)}`;
+            window.location.href = url;
+        }
+    </script>
+
+    <br>
+    <button onclick="window.location.href='index.html'">Volver al inicio</button>
+</body>
+</html>
